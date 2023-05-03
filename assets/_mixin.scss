@@ -1,0 +1,57 @@
+@mixin siteContainer{
+    margin: 0 auto;
+    padding: 0 16px;
+    width: 100%;
+    max-width: 1140px;
+    box-sizing: border-box;
+}
+.container{
+    @include siteContainer();
+}
+
+
+@mixin flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.flex{
+    @include flex();
+    &.start{
+        justify-content: start;
+    }
+}
+
+@mixin btn{
+    background: #3671E9;
+    border-radius: 32px; 
+    border: none;
+    color: #ffffff;
+    padding: 16px 32px;
+    align-items: center;
+    cursor: pointer;
+    width: 150px
+}
+.btn{
+    @include btn();
+    &.danger{
+        background-color: white;
+        color: black;
+        font-weight: 700;
+    }
+}
+@mixin siteTitle{
+    color: white;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 60px;
+}
+.title{
+    @include siteTitle();
+    &.banner{
+        color: black;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 26px;
+    }
+}
